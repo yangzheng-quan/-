@@ -1,7 +1,7 @@
-Ìí¼ÓÒ»Ìõ¼ÇÂ¼
-¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
+æ·»åŠ ä¸€æ¡è®°å½•
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
-dao.xmlµÄmapperÖĞÅäÖÃ
+dao.xmlçš„mapperä¸­é…ç½®
 
 <insert id="ceshi" parameterType="com.healthcloud.entity.PpPatientBaseEntity">
 		 insert into pp_patient_base
@@ -22,17 +22,17 @@ dao.xmlµÄmapperÖĞÅäÖÃ
 	</insert>
 
 
-ÔÙ½øÈëµ½dao.javaÎÄ¼şÖĞ
+å†è¿›å…¥åˆ°dao.javaæ–‡ä»¶ä¸­
 void ceshi(@Param("vo")PpPatientBaseEntity vo);
 
-service²ã
+serviceå±‚
 void ceshi(PpPatientBaseEntity vo);
 
-serviceimpÖØĞ´·½·¨
+serviceimpé‡å†™æ–¹æ³•
 @Override
 	public void ceshi(PpPatientBaseEntity vo){
 		ppPatientBaseDao.ceshi(vo);
-ÔÙµ½×îºóµÄcontroller²ã
+å†åˆ°æœ€åçš„controllerå±‚
  @RequestMapping(value = "/test", method = RequestMethod.GET)
     public JsonMsg test(PpPatientBaseEntity vo) {
 
@@ -41,7 +41,7 @@ serviceimpÖØĞ´·½·¨
         return JsonMsg.SUCCESS;
 
 
-navicatÖĞ·½·¨
+navicatä¸­æ–¹æ³•
  insert into pp_patient_base
 		(
 			`realname`, 
@@ -51,7 +51,7 @@ navicatÖĞ·½·¨
 		)
 		values
 		(
-			'²âÊÔ',
+			'æµ‹è¯•',
 			now(),
 			now(),
 			123
@@ -59,6 +59,6 @@ navicatÖĞ·½·¨
 		);
 		
 		select * from pp_patient_base order by id desc;
-
+a change has happened
 
 
